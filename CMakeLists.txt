@@ -1,13 +1,21 @@
 cmake_minimum_required(VERSION 3.1)
-
 project("Project_Data_Structures")
 
 file(GLOB SOURCES
-   *.h   
-   *.hpp   
-   *.cc
-   *.cpp
- )
+    *.h
+    *.cc
+    *.hpp
+    *.cpp
+)
+
+file(GLOB LIBS
+# if it is GCC Dynamic     = *.a and *.dll
+   *.a    # if GCC Static  = *.a only
+   *.dll
+# if it is MSVS Dynamic    = *.lib and *.dll
+   *.lib  # if MSVS Static = *.lib only
+   *.dll
+)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
