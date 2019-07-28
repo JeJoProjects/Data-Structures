@@ -3,10 +3,11 @@
 
 // data-structure headers
 #include "BinarySearchTreeT.hpp"
+#include "FenwickTreeT.hpp"
 
 int main()
 {
-#if 1 // Test : class BinarySearchTreeT<>
+#if 0 // Test : class BinarySearchTreeT<>
 	std::cout << "<------------------- class BinarySearchTreeT<> test ------------------->\n";
 	JeJo::BinarySearchTree<int> bst{};
 	bst.insert(1);
@@ -22,5 +23,9 @@ int main()
 	std::cout << bst;
 #endif
 
+#if 1 // Test : class FenwickTreeT<>
+	std::cout << "\n<-------------- class FenwickTreeT<> test -------------->\n";
+	JeJo::testFenwickTree({ 1, 2, 7, 8 });
+#endif
 	return 0;
 }
