@@ -3,6 +3,7 @@
 
 // data-structure headers
 #include "BinarySearchTreeT.hpp"
+#include "FenwickTree_FunctionalT.hpp"
 #include "FenwickTreeT.hpp"
 
 int main()
@@ -23,9 +24,15 @@ int main()
 	std::cout << bst;
 #endif
 
-#if 1 // Test : class FenwickTreeT<>
+#if 1 // Test : functional FenwickTreeT<>
+	std::cout << "\n<----------- functional FenwickTreeT<> test --------------->\n";
+	JeJo::testFenwickTree_testFunction({ 1,8,9,-7,-2,-4,5,0,-8,-1,-7 });
+#endif
+
+#if 0 // Test : class FenwickTreeT<>
 	std::cout << "\n<-------------- class FenwickTreeT<> test -------------->\n";
 	JeJo::testFenwickTree({ 1, 2, 7, 8 });
 #endif
+
 	return 0;
 }
